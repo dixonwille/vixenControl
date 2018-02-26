@@ -1,0 +1,11 @@
+[Unit]
+Description=Starts the Vixen Control service for button presses
+After=network.target
+
+[Service]
+ExecStart=/opt/vixenControl/vixenControl.py
+Restart=on-failure
+User=pi
+
+[Install]
+WantedBy=multi-user.target
